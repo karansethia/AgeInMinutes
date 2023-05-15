@@ -1,4 +1,9 @@
 import React from 'react'
+import styles from './AddUser.module.css'
+import logo from './logo.png'
+
+import Card from '../UI/Card'
+import Button from '../UI/Button'
 
 const AddUser = props => {
 
@@ -7,16 +12,16 @@ const AddUser = props => {
     }
 
   return (
-    <div>
-        <h2>Age In Minutes Calculator</h2>
+    <Card className={styles.input}>
+        <img src={logo} alt="" />
         <form onSubmit={addUserHandler}>
-            <label htmlFor="username">Username</label>
+            <label htmlFor="username">Name</label>
             <input type="text" id="username" />
             <label htmlFor="age">Age (in years)</label>
             <input type="number" id="age" />
-            <button type="submit">Calculate</button>
+            <Button type="submit">Calculate</Button>
         </form>
-    </div>
+    </Card>
   )
 }
 
