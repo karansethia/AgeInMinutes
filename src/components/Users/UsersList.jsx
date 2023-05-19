@@ -4,13 +4,16 @@ import styles from './UsersList.module.css'
 
 const UserList = (props) => {
 
-  return (
-    <Card className={styles.users}>
-        <ul>
-            {props.users.map(user => (<li key={user.id}>{user.name} {(user.age)} minutes old</li>))}
-        </ul>
-    </Card>
-  )
+  if(props.users.length>0){
+    return (
+      <Card className={styles.users}>
+          <ul>
+              {props.users.map(user => (<li key={user.id}>{user.name} is {(user.age)} minutes old</li>))}
+          </ul>
+      </Card>
+    )
+  }
+  return;
 }
 
 export default UserList

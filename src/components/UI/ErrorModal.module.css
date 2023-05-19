@@ -18,7 +18,8 @@
   }
   
   .header {
-    background: #4f005f;
+    /* background: #4f005f; */
+    background-image: linear-gradient(to bottom left,#fe6c1e,#4f005f);
     padding: 1rem;
   }
   
